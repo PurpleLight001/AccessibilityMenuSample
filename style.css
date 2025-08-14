@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 16px;
+    --background-color: white;
+    --color: black;
+    --accent-color: rgb(255, 216, 87);
+    --navbar-shadow: rgb(189, 189, 189);
+}
+
+:root.dark {
+    --background-color: black;
+    --color: white;
+    --accent-color: yellow;
+    --navbar-shadow: black;
+}
+
+body {
+    background-color: var(--background-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    user-select: none;
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    height: 70px;
+    background-color: var(--accent-color);
+    color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0px 5px 10px var(--navbar-shadow);
+}
+
+#navbar ul {
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+#navbar ul li {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+#navbar ul li:hover {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+#navbar ul li:active {
+    transform: scale(0.5);
+}
+
+#main {
+    padding: 40px 0px;
+    gap: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#frmAcess {
+    background-color: white;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    right: 10px;
+}
+
+#frmAcess:active {
+    transform: none;
+}
+
+#frmAcess button {
+    pointer-events: all;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    border-radius: 999px;
+    transition: all 0.2s;
+}
+
+#frmAcess button:hover {
+    background-color: black;
+    color: white;
+}
+
+#frmAcess button:active {
+    transform: scale(0.8);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+    background-color: var(--accent-color);
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.content h2 {
+    font-size: 2rem;
+}
+
+.content h3 {
+    font-size: 1.4rem;
+}
+
+.content p {
+    font-size: 1rem;
+}
